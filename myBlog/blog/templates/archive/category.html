@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Gahow's Blog: Archive
+{% endblock title %}
+
+{% block main %}
+
+  <div class="ps-4" style="font-size: 20px;">
+    最新文章
+  </div>
+
+  <div class="border-end border-secondary pe-3 ps-3">
+    {% include 'post.html' %}
+
+    {% include 'list.html' %}
+  </div>
+
+{% endblock main %}
+
+{% block sidebar %}
+
+  {% include 'category_sidebar.html' %}
+  {% include 'aboutme.html' %}
+
+{% endblock sidebar %}

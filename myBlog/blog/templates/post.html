@@ -1,0 +1,37 @@
+{% if latest_posts %}
+  <ul class="container p-0">
+    {% for post in latest_posts %}
+
+      <div class="post">
+      <div class="card m-2 shadow border-secondary">
+        <div class="card-title ps-3 mt-1 mb-1 border-bottom" style="border-color: red;">
+          <a class="card-link" href="/blog/archive/{{ post.category }}/{{ post.url_name }}/" style="font-style: italic;">
+            {{ post.title }}
+          </a>
+        </div>
+
+        <div class="card-body p-3 pb-1 pt-1 border-bottom" style="color: dimgray;">
+          {{ post.introduction | safe }}
+          <div style="text-align: center;" class="pt-1">
+          <button type="button" class="btn" style="background-color: navajowhite; font-size: large;  border-radius: 8%;">
+            <a class="card-link" href="/blog/archive/{{ post.category }}/{{ post.url_name }}/" style="font-size: large;">
+              阅读全文 >>
+            </a>
+          </button>
+          </div>
+        </div>
+
+        <div class="card-subtitle text-muted ps-3 pt-1 pb-1">
+          <div style="color: brown;">
+            发布时间：{{ post.publish_time }} &nbsp; 分类：
+            <a href="/blog/archive/{{ post.category }}/" style="text-decoration: none; color: brown; font-style: italic;">{{ post.category }}</a>
+          </div>
+        </div>
+      </div>
+      </div>
+
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>No posts are available.</p>
+{% endif %}

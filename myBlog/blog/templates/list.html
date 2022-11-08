@@ -1,0 +1,18 @@
+<div class="border-top border-secondary pt-2">
+  {% if posts %}
+    <ul>
+      {% for post in posts %}
+        <li class="module-list" style="font-size: 18px;">
+          <a style="font-family: monospace;">
+            {{ post.publish_time }}：
+          </a>
+          <a href="/blog/archive/{{ post.category }}/{{ post.url_name }}/" style="color: black; font-family: monospace; font-style: italic;">
+            {{ post.title }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No posts are available.</p>
+  {% endif %}
+</div>

@@ -1,0 +1,19 @@
+{% if categorys %}
+  <div class="card mb-3">
+    <div class="card-header mb-2" style="font-size: 20px;">
+      分类
+    </div>
+    <ul>
+      {% for category in categorys %}
+        <li class="module-list" style="font-size: 18px;">
+          <a href="/blog/archive/{{ category.name }}/" style="color: black; font-family: monospace;">
+            {{ category.name }}
+          </a>
+          <a style="font-style: italic; font-family: monospace;">
+           ({{ category.count }})
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}

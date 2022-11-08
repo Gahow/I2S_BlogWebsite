@@ -1,0 +1,43 @@
+.card {
+  border-radius: 12px;
+  background-color: beige;
+}
+
+.post .card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+.card-link {
+  color: brown;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.card-link:hover {
+  color: red;
+}
+
+nav .navbar-nav li a {
+  border-radius: 10%;
+}
+
+nav .navbar-nav li a:hover {
+  background-color: brown;
+}
+
+
+.toc ul {
+  padding-left: 1.5rem;
+}
+
+.toc ul li a {
+  text-decoration: none;
+  color: dimgray;
+}
+
+.toc ul li a:hover {
+  color: black;
+}
+
+

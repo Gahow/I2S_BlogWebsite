@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load markdownify %}
+
+{% block title %}
+  Gahow's Blog: {{ post.title }}
+{% endblock title %}
+
+{% block main %}
+
+  <div class="border-end border-secondary pe-3 ps-3">
+    {{ body | safe }}
+  </div>
+
+{% endblock main %}
+
+{% block sidebar %}
+
+  {% if toc %}
+    
+    <div class="card border-secondary pt-2 ps-2">
+      <h3 class="widget-title" style="color: brown;">目录</h3>
+        {{ toc | safe }}
+    </div>
+  {% endif %}
+
+{% endblock sidebar %}

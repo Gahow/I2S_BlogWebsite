@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Gahow's Blog
+{% endblock title %}
+
+{% block main %}
+  {% if history_today %}
+    <ul class="container" style="height: 340px;">
+      <div class="card border-secondary" style="height: 340px;">
+        <div class="card-header mb-2" style="font-size: 20px; font-style: italic; color:brown;">
+          历史上的今天
+        </div>
+        <div class="row" style="height: 270px;">
+          <div class="col-6" style="height: 270px; margin-left: 1rem;">
+            <img src={{ history_today.picurl }} style="border-radius: 2%; width: auto; height: 100%; max-width: 100%; height: 100%;">
+          </div>
+          <div class="col-4" style="height: 340px;">
+            <p style="color: dimgray; font-size: 20px; font-style: italic;">
+              发生时间：{{ history_today.year }}年
+            </p>
+            <p style="color: dimgray; font-size: 20px;">
+              {{ history_today.title }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </ul>
+  {% endif %}
+
+  {% include 'post.html' %}
+
+{% endblock main %}
+
+{% block sidebar %}
+
+  {% include 'aboutme.html' %}
+
+  {% if news %}
+    <div class="card border-secondary">
+      <div class="card-header mb-1">
+        科技热点
+      </div>
+      <ul>
+        {% for new in news %}
+          <li style="padding-bottom: 0.3rem; padding-right: 0.5rem;">
+            <a href={{ new.url }} style="color: black;">
+              {{ new.title }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+
+{% endblock sidebar %}

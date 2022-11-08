@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Gahow's Blog: About
+{% endblock title %}
+
+{% block main %}
+
+  <div class="ps-3 pe-3">
+    <div class="mb-3" style="text-align: center; font-size: xx-large; color: brown; font-weight: 400;">
+      谢谢你想了解我
+    </div>
+
+    <p class="mt-2 border-bottom mb-2 pb-2 ps-2" style="font-size: large;">
+      我是Gahow, 北京航空航天大学软件工程在读。
+    </p>
+
+    <p style="font-size: large; color: brown;">
+      编程技能
+      <ul class="border-bottom pb-1" >
+        <li>
+          C/C++
+        </li>
+        <li>
+          Python
+        </li>
+        <li>
+          Java
+        </li>
+      </ul>
+    </p>
+
+    <p style="font-size: large; color: brown;">
+      Contact me
+    </p>
+    <a class="ms-4" href="https://github.com/gahow" style="color: black;">Github</a>
+  </div>
+
+{% endblock main %}
+
+
+{% block sidebar %}
+
+  {% include 'aboutme.html' %}
+
+{% endblock sidebar %}
